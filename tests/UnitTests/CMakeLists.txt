@@ -6,7 +6,8 @@ add_executable(${TEST_NAME})
 target_sources(${TEST_NAME} PRIVATE
     ../Common/JsonParser_Common_Fixtures.hpp
 	JsonParser_Fixtures.hpp
-	JsonParser_Serialization_Tests.cpp)
+	JsonParser_Serialization_Tests.cpp
+	JsonParser_Deserialization_Tests.cpp)
 
 target_link_libraries(${TEST_NAME} JsonParser gtest gtest_main)
 
