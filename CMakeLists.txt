@@ -4,6 +4,7 @@ project(JsonParser)
 
 include(FetchContent)
 
+
 # GoogleTest dependency
 
 FetchContent_Declare(
@@ -18,7 +19,8 @@ if(NOT googletest_POPULATED)
   add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 endif()
 
-# nlohmann library dependency
+
+# nlohmann dependency
 
 FetchContent_Declare(json
   GIT_REPOSITORY https://github.com/nlohmann/json.git
@@ -31,37 +33,17 @@ if(NOT json_POPULATED)
 endif()
 
 
-add_subdirectory(tests)
-
+# Json Parser library
 
 set(JSON_PARSER_LIBRARY_NAME JsonParser)
 
 add_library(${JSON_PARSER_LIBRARY_NAME})
 
-set(INCLUDE_FILES
-   include/JsonArray.hpp
-   include/JsonDataReader.hpp
-   include/JsonNode.hpp
-   include/JsonObject.hpp
-   include/JsonParser.hpp
-   include/JsonRawValue.hpp
-)
-
-set(SRC_FILES
-   src/JsonArray.cpp
-   src/JsonObject.cpp
-   src/JsonParser.cpp
-   src/JsonTraversalAlgorithm.hpp
-)
-
-set(ALL_FILES ${INCLUDE_FILES} ${SRC_FILES})
-
-target_sources(${JSON_PARSER_LIBRARY_NAME} PRIVATE ${ALL_FILES})
-   
-source_group(TREE ${CMAKE_CURRENT_LIST_DIR} FILES ${ALL_FILES})
+include(files.cmake)
+set_files()
 
 target_compile_features(${JSON_PARSER_LIBRARY_NAME} PRIVATE cxx_std_17)
 
-target_include_directories(${JSON_PARSER_LIBRARY_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
 target_link_libraries(${JSON_PARSER_LIBRARY_NAME} PRIVATE nlohmann_json::nlohmann_json)
+
+add_subdirectory(tests)
