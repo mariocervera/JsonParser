@@ -3,7 +3,11 @@ set(SRC_LIBRARY_NAME JsonParser)
 
 add_library(${SRC_LIBRARY_NAME})
 
-target_sources(${SRC_LIBRARY_NAME} PRIVATE JsonParser.cpp)
+target_sources(${SRC_LIBRARY_NAME} PRIVATE
+   ../include/JsonNode.hpp
+   ../include/JsonObject.hpp
+   JsonObject.cpp
+   JsonParser.cpp )
 
 target_compile_features(${SRC_LIBRARY_NAME} PRIVATE cxx_std_17)
 
