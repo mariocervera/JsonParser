@@ -15,6 +15,8 @@ namespace EWOS::Infrastructure::JSONParser {
       : JsonNode(JsonNodeType::Object) {
     }
 
+    explicit JsonObject(const std::string& jsonObject);
+
     bool isWellFormed() const { return !parseError; }
 
     size_t size() const { return objectMap.size(); }
