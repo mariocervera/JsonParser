@@ -2,33 +2,33 @@
 #include <fstream>
 
 namespace EWOS::Infrastructure::JSONParser {
+	
+	static JsonObject createMalformedJsonObject() {
+		return JsonObject("{{}");
+	}
 
-  static JsonObject createMalformedJsonObject() {
-    return JsonObject("{{}");
-  }
+	static std::string readContents(std::ifstream& file) {
+		std::string contents;
+		std::string line;
+		while (std::getline(file, line))
+			contents += line;
+		return contents;
+	}
 
-  static std::string readContents(std::ifstream& file) {
-    std::string contents;
-    std::string line;
-    while (std::getline(file, line))
-      contents += line;
-    return contents;
-  }
+	JsonObject parseJsonFile(const std::string& path) {
+		
+		std::ifstream file(path);
 
-  JsonObject parseJsonFile(const std::string& path) {
+		if (!file.is_open())
+			return createMalformedJsonObject();
 
-    std::ifstream file(path);
+		const auto json = readContents(file);
+		return JsonObject(json);
+	}
 
-    if (!file.is_open())
-      return createMalformedJsonObject();
-
-    const auto json = readContents(file);
-    return JsonObject(json);
-  }
-
-  void createJsonFileFrom(const JsonObject& jsonObject, const std::string& targetPath) {
-    std::ofstream file(targetPath);
-    file << jsonObject.toFormattedJsonString();
-    file.close();
-  }
+	void createJsonFileFrom(const JsonObject& jsonObject, const std::string& targetPath) {
+		std::ofstream file(targetPath);
+		file << jsonObject.toFormattedJsonString();
+		file.close();
+	}
 }

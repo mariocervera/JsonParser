@@ -11,7 +11,13 @@ set(UNIT_TESTS_FILES
 	UnitTests/JsonParser_Deserialization_Tests.cpp
 )
 
-set(ALL_FILES ${COMMON_FILES} ${UNIT_TESTS_FILES})
+set(FUNCTIONAL_TESTS_FILES
+    FunctionalTests/JsonParser_Fixtures.hpp
+	FunctionalTests/JsonParser_Serialization_Tests.cpp
+	FunctionalTests/JsonParser_Deserialization_Tests.cpp
+)
+
+set(ALL_FILES ${COMMON_FILES} ${UNIT_TESTS_FILES} ${FUNCTIONAL_TESTS_FILES})
 
 target_sources(${TEST_NAME} PRIVATE ${ALL_FILES})
 

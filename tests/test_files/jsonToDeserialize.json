@@ -1,0 +1,13 @@
+{
+  "name" : "John Doe",
+  "age" : "30",
+  "course" : {
+  	"teacher" : "Jane Doe",
+    "topics" : ["Introduction to Programming", "Algorithms and Data Structures", "Agile Development"],
+	"university" : {
+	  "name" : "Universitat Politecnica de Valencia",
+	  "campus" : ["Valencia", "Gandia", "Alcoy"]
+	}
+  }
+}
+  
