@@ -3,10 +3,9 @@
 
 #include "JsonParser_Common_Fixtures.hpp"
 
-namespace EWOS::Infrastructure::UnitTests::JSONParser {
+namespace UnitTests::JSONParser {
 
-  using namespace Infrastructure::JSONParser;
-  using namespace Tests::Common::JSONParser;
+  using namespace Tests_Common::JSONParser;
 
   static const std::string testKey1 = "Test Key 1";
   static const std::string testKey2 = "Test Key 2";

@@ -7,7 +7,7 @@ static std::string removeExtraCommaFrom(const std::string& s) {
   return s.substr(0, s.size() - 2);
 }
 
-namespace EWOS::Infrastructure::JSONParser {
+namespace JSONParser {
 
   using namespace nlohmann;
 

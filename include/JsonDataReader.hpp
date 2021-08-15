@@ -6,7 +6,7 @@
 #include <sstream>
 #include <vector>
 
-namespace EWOS::Infrastructure::JSONParser {
+namespace JSONParser {
 
   template <typename T>
   T readAs(const JsonRawValue& rawValue) {

@@ -6,9 +6,9 @@
 #include "JsonRawValue.hpp"
 #include <string>
 
-namespace EWOS::Infrastructure::Tests::Common::JSONParser {
+namespace Tests_Common::JSONParser {
 
-  using namespace Infrastructure::JSONParser;
+  using namespace ::JSONParser;
 
   // Helper functions for fixture creation code (for both functional and unit tests).
 

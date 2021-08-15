@@ -3,9 +3,7 @@
 #include "JsonParser_Fixtures.hpp"
 #include <fstream>
 
-namespace EWOS::Infrastructure::FunctionalTests::JSONParser {
-
-  using namespace Infrastructure::JSONParser;
+namespace FunctionalTests::JSONParser {
 
   // Helper functions.
 

@@ -7,10 +7,9 @@
 #include <memory>
 #include <string>
 
-namespace EWOS::Infrastructure::FunctionalTests::JSONParser {
+namespace FunctionalTests::JSONParser {
 
-  using namespace Infrastructure::JSONParser;
-  using namespace Tests::Common::JSONParser;
+  using namespace Tests_Common::JSONParser;
 
   static const std::string jsonFilePath = "../../tests/test_files/jsonToDeserialize.json";
   static const std::string actualJsonFilePath = "../../tests/test_files/actualSerialization.json";

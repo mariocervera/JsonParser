@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace EWOS::Infrastructure::JSONParser {
+namespace JSONParser {
 
   enum class JsonNodeType {
     RawValue,

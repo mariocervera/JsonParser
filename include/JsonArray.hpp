@@ -6,7 +6,7 @@
 #include <memory>
 #include <vector>
 
-namespace EWOS::Infrastructure::JSONParser {
+namespace JSONParser {
 
   /// An array in a JSON data structure. Arrays can contain raw values.
   class JsonArray : public JsonNode {

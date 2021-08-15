@@ -4,7 +4,7 @@
 #include "JsonObject.hpp"
 #include <string>
 
-namespace EWOS::Infrastructure::JSONParser {
+namespace JSONParser {
 
   JsonObject parseJsonFile(const std::string& path);
 

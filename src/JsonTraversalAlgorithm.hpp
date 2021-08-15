@@ -5,7 +5,7 @@
 #include "JsonArray.hpp"
 #include <nlohmann/json.hpp>
 
-namespace EWOS::Infrastructure::JSONParser {
+namespace JSONParser {
 
   inline void addJsonRawValueToMap(std::unordered_map<std::string, std::unique_ptr<JsonNode>>& objectMap,
                                    const std::string& key, nlohmann::json& jsonRawValue) {

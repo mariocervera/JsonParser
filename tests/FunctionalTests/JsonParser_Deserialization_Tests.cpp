@@ -3,9 +3,7 @@
 #include "JsonParser_Fixtures.hpp"
 #include <gtest/gtest.h>
 
-namespace EWOS::Infrastructure::FunctionalTests::JSONParser {
-
-  using namespace Infrastructure::JSONParser;
+namespace FunctionalTests::JSONParser {
 
   using JsonMap = std::unordered_map<std::string, std::unique_ptr<JsonNode>>;
 

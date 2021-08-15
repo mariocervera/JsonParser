@@ -6,7 +6,7 @@
 #include <string>
 #include <unordered_map>
 
-namespace EWOS::Infrastructure::JSONParser {
+namespace JSONParser {
 
   /// An object in a JSON data structure. A JSON object contains key-value pairs.
   class JsonObject : public JsonNode {

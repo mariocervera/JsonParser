@@ -1,7 +1,7 @@
 #include "JsonParser.hpp"
 #include <fstream>
 
-namespace EWOS::Infrastructure::JSONParser {
+namespace JSONParser {
 	
 	static JsonObject createMalformedJsonObject() {
 		return JsonObject("{{}");

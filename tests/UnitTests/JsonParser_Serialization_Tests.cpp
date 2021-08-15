@@ -2,7 +2,7 @@
 #include "JsonParser_Fixtures.hpp"
 #include <gtest/gtest.h>
 
-namespace EWOS::Infrastructure::UnitTests::JSONParser {
+namespace UnitTests::JSONParser {
 
   // Verification methods.
 
