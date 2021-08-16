@@ -1,7 +1,7 @@
 
 function(set_files)
 
-set(INCLUDE_FILES
+set(HEADER_FILES
    include/JsonArray.hpp
    include/JsonDataReader.hpp
    include/JsonNode.hpp
@@ -17,12 +17,12 @@ set(SRC_FILES
    src/JsonTraversalAlgorithm.hpp
 )
 
-set(ALL_FILES ${INCLUDE_FILES} ${SRC_FILES})
+set(ALL_FILES ${HEADER_FILES} ${SRC_FILES})
 
-target_sources(${JSON_PARSER_LIBRARY_NAME} PRIVATE ${ALL_FILES})
+target_sources(${JSON_PARSER_LIBRARY} PRIVATE ${ALL_FILES})
    
 source_group(TREE ${CMAKE_CURRENT_LIST_DIR} FILES ${ALL_FILES})
 
-target_include_directories(${JSON_PARSER_LIBRARY_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(${JSON_PARSER_LIBRARY} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 endfunction()

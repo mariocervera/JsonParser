@@ -35,15 +35,15 @@ endif()
 
 # Json Parser library
 
-set(JSON_PARSER_LIBRARY_NAME JsonParser)
+set(JSON_PARSER_LIBRARY JsonParser)
 
-add_library(${JSON_PARSER_LIBRARY_NAME})
+add_library(${JSON_PARSER_LIBRARY})
 
 include(files.cmake)
 set_files()
 
-target_compile_features(${JSON_PARSER_LIBRARY_NAME} PRIVATE cxx_std_17)
+target_compile_features(${JSON_PARSER_LIBRARY} PRIVATE cxx_std_17)
 
-target_link_libraries(${JSON_PARSER_LIBRARY_NAME} PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(${JSON_PARSER_LIBRARY} PRIVATE nlohmann_json::nlohmann_json)
 
 add_subdirectory(tests)

@@ -51,7 +51,7 @@ namespace FunctionalTests::JSONParser {
     assertArrayIsCorrect(university, "campus", "Valencia", "Gandia", "Alcoy");
   }
 
-  // Tests.
+  // Test methods.
 
   TEST(GivenJsonDeserializer, WhenWeDeserializeNonExistentJsonFileThenWeGetMalformedObject) {
 

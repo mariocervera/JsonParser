@@ -1,11 +1,11 @@
   
-set(TEST_NAME JsonParserTests)
+set(JSON_PARSER_TESTS JsonParserTests)
 
-add_executable(${TEST_NAME})
+add_executable(${JSON_PARSER_TESTS})
 
 include(files.cmake)
 set_files()
 
-target_link_libraries(${TEST_NAME} JsonParser gtest gtest_main)
+target_link_libraries(${JSON_PARSER_TESTS} JsonParser gtest gtest_main)
 
-target_compile_features(${TEST_NAME} PRIVATE cxx_std_17)
+target_compile_features(${JSON_PARSER_TESTS} PRIVATE cxx_std_17)

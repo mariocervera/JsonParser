@@ -1,17 +1,17 @@
- #include "JsonDataReader.hpp"
+#include "JsonDataReader.hpp"
 #include "JsonParser_Fixtures.hpp"
 #include <gtest/gtest.h>
 
 namespace UnitTests::JSONParser {
 
-  // Verification methods.
+  // Verification methods (Act + Assert).
 
   static void verifyJsonObjectSerializesCorrectly(const JsonObject& jsonObject, const std::string& expectedJson) {
     const auto actualJson = jsonObject.toJsonString();
     ASSERT_EQ(actualJson, expectedJson);
   }
 
-  // Parameterized tests.
+  // Parameterized tests (Arrange + Act + Assert).
 
   static void test_serializeJson_shouldSerializeRawValues(const std::vector<RawItem>& items,
                                                           const std::string& expectedJson) {
